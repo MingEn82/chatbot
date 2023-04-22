@@ -1,7 +1,7 @@
 import yfinance as yf
 import pandas as pd
 
-data = yf.Ticker("TSLA").history(period="2y")
+data = yf.Ticker("TSLA").history(period="1m")
 
 # Calculate SMA
 data['SMA10'] = data['Close'].rolling(10).mean()

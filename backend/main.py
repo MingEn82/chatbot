@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 import sketch
 import pandas as pd
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -14,7 +15,7 @@ def main():
         question = request.form.get("question")
         answer = pattern_data.sketch.ask(question, call_display=False)
         return {
-            "answer": answer
+            'answer': answer
         }
     else:
         return "<p>Invalid method</p>"
