@@ -16,9 +16,6 @@ class ActionProvider {
     await fetch('http://127.0.0.1:5000', {
       method: 'POST',
       body: formData,
-      headers: {
-        'Content-Type': 'application/json'
-      }
     }).then(res => {
       res.json().then((data) => {
         console.log(data['answer']);

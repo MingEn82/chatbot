@@ -10,7 +10,7 @@ class MessageParser {
     if (lowerCaseMessage.includes("hello")) {
       this.actionProvider.greet();
     } else {
-      this.actionProvider.queryAnswer();
+      this.actionProvider.queryAnswer(message);
     }
   }
 }
